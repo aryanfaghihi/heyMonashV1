@@ -1,0 +1,250 @@
+.header {
+    height: 50px;
+    vertical-align: middle;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 100%;
+    font-size: 1.5em;
+    margin-top: -5px;
+}
+
+#conversation {
+    margin-top: 0;
+    height: 80vh;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.question,
+.response {
+    font-size: 18px;
+    line-height: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 1em;
+    clear: both;
+    max-width: 75%;
+    word-wrap: break-word;
+
+    /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.question {
+    float:right;
+    margin-left:10%
+}
+
+.response {
+    float:left;
+    margin-right: 10%
+}
+
+.bubble-question {
+    background-color: rgb(68,138,255);
+    border-radius: 10px;
+    padding: 0.7em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: white;
+    transition: opacity 1s;
+}
+
+.bubble-response {
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 0.7em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    color: black;
+}
+
+.mic {
+    align-content: center;
+    z-index: 5;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+}
+
+.fadeout {
+    position: relative;
+    bottom: 50px;
+    height: 60px;
+    background: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 60%
+    );
+    background-image: -moz-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 60%
+    );
+    background-image: -o-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 60%
+    );
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 60%
+    );
+    background-image: -ms-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 60%
+    );
+}
+
+
+
+.pulse-button {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: none;
+    box-shadow: 0 0 0 0 #b1cbe6;
+    border-radius: 50%;
+    background-color: #e84c3d;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/173024/jonathanlarradet_copy.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+.pulse-button-anim {
+    -webkit-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 120px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 120px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 120px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 120px rgba(232, 76, 61, 0);}}
+
+
+.hidden {
+    display: none;
+}
+
+
+/*Card styles*/
+.mdl-card-wide {
+    width: 250px;
+    margin-bottom: 1em;
+    background-color: white;
+}
+.mdl-card__title {
+    color: white;
+}
+.mdl-card {
+    background-color: #f1f1f1;
+    /*border-top-color: #1E90FF;*/
+    /*border-top-style: solid;*/
+    /*border-top-width: 5px;*/
+}
+.mdl-card__supporting-text {
+    color: #423F40;
+    font-weight: lighter;
+}
+
+.mdl-button--icon {
+    color: white;
+}
+
+.mdl-button__ripple-container {
+    color: #1E90FF;
+}
+
+#card-class.mdl-card__title {
+    height: 160px;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),
+    url('https://www.australiandesignreview.com/wp-content/uploads/2014/11/monash-4.jpg') no-repeat #46B6AC;
+    color: white;
+    background-position: 50% 90%;
+    background-size: 400px 180px;
+}
+
+#card-library-hal.mdl-card__title {
+    height: 160px;
+    background:
+    url('https://www.monash.edu/__data/assets/image/0003/157764/banner-title-hal.jpg') bottom right 70% no-repeat #46B6AC;
+    color: white;
+}
+
+#card-library-matheson.mdl-card__title {
+    height: 160px;
+    background:
+    url('https://www.monash.edu/__data/assets/image/0011/157727/front.jpg') bottom right 50% no-repeat #46B6AC;
+    color: white;
+}
+
+
+.demo-card-event.mdl-card {
+    width: 250px;
+    background: white;
+}
+.demo-card-event > .mdl-card__actions {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.demo-card-event > .mdl-card__title {
+    color: black;
+    align-items: flex-start;
+}
+.demo-card-event > .mdl-card__title > h4 {
+    color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.demo-card-event > .mdl-card__actions {
+    display: flex;
+    box-sizing:border-box;
+    align-items: center;
+}
+.demo-card-event > .mdl-card__actions > .material-icons {
+    padding-right: 10px;
+}
+.demo-card-event > .mdl-card__title,
+.demo-card-event > .mdl-card__actions,
+.demo-card-event > .mdl-card__actions > .mdl-button {
+    color: #1E90FF;
+}
