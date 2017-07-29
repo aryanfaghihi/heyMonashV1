@@ -127,7 +127,8 @@ module.exports = {
         {
             keywords: {
                 required: [
-                    "you"
+                    "you",
+                    "i"
                 ],
 
                 alternatives: [
