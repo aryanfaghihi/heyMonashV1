@@ -127,7 +127,25 @@ module.exports = {
         {
             keywords: {
                 required: [
-                    "you",
+                    "you"
+                ],
+
+                alternatives: [
+                    "can",
+                    "are you",
+                    "able",
+                    "what",
+                    "help"
+                ]
+            },
+            response: response.getCanDo()
+
+
+        },
+        
+        {
+            keywords: {
+                required: [
                     "i"
                 ],
 
